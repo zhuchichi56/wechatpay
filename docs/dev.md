@@ -8,3 +8,11 @@
 - **Files Changed:** `docs/dev.md`; build outputs and dependencies are ignored by Git.
 - **Validation:** All 31 existing tests, TypeScript checks, and Vite renderer build passed. macOS deep/strict signature verification passed. Main and renderer processes run, and CUA screenshot verification shows the welcome page, bill import button, and analysis navigation. No personal bill has been imported.
 - **Commit Hash:** Initial installation record: `0cd51e5`. Final validation is recorded in the commit containing this update.
+
+## 2026-11-01 — Assist with WeChat bill export
+
+- **Question:** Operate WeChat to export the user's personal reconciliation bill for local spending analysis.
+- **Analysis / Root Cause:** The connected iPhone is detected, but the mobilecli readiness helper cannot install its runner because the free developer profile already has three installed applications. No existing app was removed. iPhone Mirroring is available but requires the owner to unlock it using Mac Touch ID or login credentials.
+- **Solution:** Switched to the existing iPhone Mirroring application, resumed the connection, and requested that the owner unlock it before continuing. No bill was exported and no financial action was performed.
+- **Files Changed:** `docs/dev.md`.
+- **Commit Hash:** Recorded in the commit containing this entry.
